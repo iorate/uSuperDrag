@@ -1,4 +1,4 @@
-document.addEventListener('dragover', function(e) {
+document.addEventListener('dragover', e => {
   if (e.dataTransfer.types.includes('text/plain') &&
      !e.dataTransfer.types.includes('text/uri-list') &&
       e.target.tagName != 'INPUT' &&
@@ -7,7 +7,7 @@ document.addEventListener('dragover', function(e) {
     e.preventDefault();
   }
 }, false);
-document.addEventListener('drop', function(e) {
+document.addEventListener('drop', e => {
   if (e.target.tagName != 'INPUT' &&
       e.target.tagName != 'TEXTAREA') {
     chrome.runtime.sendMessage(e.dataTransfer.getData('text/plain'));

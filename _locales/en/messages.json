@@ -1,0 +1,21 @@
+{
+  "extensionName": {
+    "message": "Drag To Search"
+  },
+  "extensionDescription": {
+    "message": "Search for dragged texts"
+  },
+
+  "searchUrl": {
+    "message": "URL"
+  },
+  "searchUrlDescription": {
+    "message": "Substitute search keyword in address with %s or %S"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "saveStatus": {
+    "message": "Saved"
+  }
+}

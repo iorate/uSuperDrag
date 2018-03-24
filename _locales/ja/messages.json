@@ -1,0 +1,21 @@
+{
+  "extensionName": {
+    "message": "Drag To Search"
+  },
+  "extensionDescription": {
+    "message": "ドラッグした文字列をウェブで検索します"
+  },
+
+  "searchUrl": {
+    "message": "URL"
+  },
+  "searchUrlDescription": {
+    "message": "アドレス内の検索キーワードの部分を、%sまたは%Sに書き換えて下さい"
+  },
+  "save": {
+    "message": "保存"
+  },
+  "saveStatus": {
+    "message": "保存しました"
+  }
+}

@@ -1,8 +1,10 @@
 {
   "manifest_version": 2,
 
-  "name": "Drag To Search",
-  "description": "Search for dragged text",
+  "default_locale": "en",
+
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
   "version": "1.0",
   "permissions": ["storage", "tabs"],
 
@@ -10,19 +12,16 @@
     "scripts": ["eventpage.js"],
     "persistent": false
   },
-
   "content_scripts": [{
     "matches": ["http://*/*", "https://*/*"],
     "js": ["contentscript.js"],
     "run_at": "document_end"
   }],
-
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
     "128": "icon128.png"
   },
-
   "options_ui": {
     "page": "options.html",
     "chrome_style": true
