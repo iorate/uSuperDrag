@@ -6,11 +6,23 @@
     "message": "ドラッグした文字列をウェブで検索します"
   },
 
+  "enableTextSearch": {
+    "message": "選択文字列をドラッグして検索する"
+  },
   "searchUrl": {
     "message": "URL"
   },
   "searchUrlDescription": {
     "message": "アドレス内の検索キーワードの部分を、%sまたは%Sに書き換えて下さい"
+  },
+  "enableLinkOpen": {
+    "message": "リンクをドラッグして開く"
+  },
+  "enableLinkTextSelect": {
+    "message": "リンク文字列を横にドラッグして選択する"
+  },
+  "selectLikeOpera": {
+    "message": "リンク文字列をPresto Opera風に選択します"
   },
   "save": {
     "message": "保存"

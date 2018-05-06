@@ -3,14 +3,26 @@
     "message": "Drag To Search"
   },
   "extensionDescription": {
-    "message": "Search for dragged texts"
+    "message": "Search for dragged text"
   },
 
+  "enableTextSearch": {
+    "message": "Drag selected text to search for"
+  },
   "searchUrl": {
     "message": "URL"
   },
   "searchUrlDescription": {
     "message": "Substitute search keyword in address with %s or %S"
+  },
+  "enableLinkOpen": {
+    "message": "Drag link to open"
+  },
+  "enableLinkTextSelect": {
+    "message": "Drag link text horizontally to select"
+  },
+  "selectLikeOpera": {
+    "message": "Select link text like Presto Opera"
   },
   "save": {
     "message": "Save"
