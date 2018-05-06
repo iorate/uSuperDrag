@@ -38,7 +38,7 @@ chrome.storage.sync.get({
   if (items.enableLinkTextSelect) {
     // https://gist.github.com/Griever/5005165
     // The original code is copyrighted by Griever and licensed under MIT license.
-    function LinkDragSelection(){
+    function LinkDragSelection() {
       this.init.apply(this, arguments);
     }
     LinkDragSelection.prototype = {
@@ -46,8 +46,9 @@ chrome.storage.sync.get({
       init: function(event) {
         this.range = document.caretRangeFromPoint(event.pageX - scrollX, event.pageY - scrollY);
         var sel = getSelection();
-        if (!sel.isCollapsed && sel.getRangeAt(0).isPointInRange(this.range.startContainer, this.range.startOffset))
+        if (!sel.isCollapsed && sel.getRangeAt(0).isPointInRange(this.range.startContainer, this.range.startOffset)) {
           return;
+        }
         this.screenX = event.screenX;
         this.screenY = event.screenY;
         addEventListener("mousemove", this, false);
@@ -62,12 +63,13 @@ chrome.storage.sync.get({
         }.bind(this), 100);
       },
       handleEvent: function(event) {
-        switch(event.type){
+        switch(event.type) {
           case "mousemove":
             if (this.moved_flag) {
               var range = document.caretRangeFromPoint(event.pageX - scrollX, event.pageY - scrollY);
-              if (range)
+              if (range) {
                 getSelection().extend(range.startContainer, range.startOffset);
+              }
             } else {
               this.moveX = event.screenX;
               this.moveY = event.screenY;
@@ -112,8 +114,12 @@ chrome.storage.sync.get({
       },
     };
     addEventListener("mousedown", function(event) {
-      if (event.button != 0 || event.altKey) return;
-      if (!event.target.webkitMatchesSelector('a[href], a[href] *')) return;
+      if (event.button != 0 || event.altKey) {
+        return;
+      }
+      if (!event.target.webkitMatchesSelector('a[href], a[href] *')) {
+        return;
+      }
       new LinkDragSelection(event);
     }, false);
   }
