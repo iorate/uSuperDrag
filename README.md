@@ -9,7 +9,7 @@ In addition, this extension enables us to drag link text horizontally and select
 ## Author
 [@iorate](https://twitter.com/iorate)
 
-The original code for "Drag link text horizontally to select" feature is copyrighted by [Griever](https://github.com/Griever) and licensed under MIT license, and modified by @iorate.
+The original code for "Drag link text horizontally to select" feature is copyrighted by [Griever](https://github.com/Griever) and licensed under MIT license, and modified by @iorate. Please see [contentscript.js](https://github.com/iorate/Drag-To-Search/blob/master/contentscript.js#L39).
 
 The icon is made by [矢印デザイン](http://yajidesign.com/).
 
