@@ -29,7 +29,7 @@ chrome.storage.sync.get({
         if (items.enableTextSearch &&
             e.target.tagName != 'INPUT' && e.target.tagName != 'TEXTAREA') {
           const keyword = encodeURIComponent(e.dataTransfer.getData('text/plain'));
-          chrome.runtime.sendMessage(items.searchUrl.replace('%s', keyword).replace('%S', keyword));
+          chrome.runtime.sendMessage(items.searchUrl.replace(/%s/gi, keyword));
           e.preventDefault();
         }
       }
