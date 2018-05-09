@@ -7,11 +7,11 @@ This Chrome extension provides "Super Drag" for selected text and link. If you d
 In addition, this extension enables us to drag link text horizontally and select it, just like Presto Opera.
 
 ## Author
-[@iorate](https://twitter.com/iorate)
+[iorate](https://github.com/iorate) ([Twitter](https://twitter.com/iorate))
 
-The original code for "Drag link text horizontally to select" feature is copyrighted by [Griever](https://github.com/Griever) and licensed under MIT license, and modified by @iorate. Please see [contentscript.js](https://github.com/iorate/Drag-To-Search/blob/master/contentscript.js#L39).
+[The original code](https://gist.github.com/Griever/5005165) for "Drag link text horizontally to select" feature is copyrighted by [Griever](https://github.com/Griever) and licensed under [the MIT license](https://opensource.org/licenses/mit-license.php).
 
 The icon is made by [矢印デザイン](http://yajidesign.com/).
 
 ## License
-MIT License
+[The MIT License](LICENSE.txt)

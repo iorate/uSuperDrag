@@ -36,8 +36,6 @@ chrome.storage.sync.get({
     }, false);
   }
   if (items.enableLinkTextSelect) {
-    // https://gist.github.com/Griever/5005165
-    // The original code is copyrighted by Griever and licensed under MIT license.
     function LinkDragSelection() {
       this.init.apply(this, arguments);
     }
