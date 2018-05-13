@@ -5,6 +5,10 @@ chrome.storage.sync.get({
   enableLinkTextSelect: false
 }, items => {
   if (items.enableTextSearch || items.enableLinkOpen) {
+    const isTextArea = element => element.matches(
+      'input[type="email"], input[type="number"], input[type="password"], input[type="search"], ' +
+      'input[type="tel"], input[type="text"], input[type="url"], textarea'
+    );
     document.addEventListener('dragover', event => {
       if (event.dataTransfer.types.includes('text/uri-list')) {
         if (items.enableLinkOpen) {
@@ -12,8 +16,7 @@ chrome.storage.sync.get({
           event.preventDefault();
         }
       } else if (event.dataTransfer.types.includes('text/plain')) {
-        if (items.enableTextSearch &&
-            event.target.tagName != 'INPUT' && event.target.tagName != 'TEXTAREA') {
+        if (items.enableTextSearch && !isTextArea(event.target)) {
           event.dataTransfer.dropEffect = 'link';
           event.preventDefault();
         }
@@ -27,8 +30,7 @@ chrome.storage.sync.get({
           event.preventDefault();
         }
       } else if (event.dataTransfer.types.includes('text/plain')) {
-        if (items.enableTextSearch &&
-            event.target.tagName != 'INPUT' && event.target.tagName != 'TEXTAREA') {
+        if (items.enableTextSearch && !isTextArea(event.target)) {
           const keyword = event.dataTransfer.getData('text/plain');
           const url = items.searchUrl.replace(/%s/gi, encodeURIComponent(keyword));
           chrome.runtime.sendMessage(url);
