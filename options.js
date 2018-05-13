@@ -4,9 +4,9 @@ chrome.storage.sync.get({
   enableLinkOpen: true,
   enableLinkTextSelect: false
 }, items => {
-  document.querySelectorAll('[data-translate]').forEach((element, index, elements) => {
+  for (let element of document.querySelectorAll('[data-translate]')) {
     element.textContent = chrome.i18n.getMessage(element.dataset.translate);
-  });
+  }
 
   const enableTextSearch = document.getElementById('enable-text-search');
   const searchUrl = document.getElementById('search-url');
@@ -16,14 +16,15 @@ chrome.storage.sync.get({
   const saveStatus = document.getElementById('save-status');
 
   enableTextSearch.checked = items.enableTextSearch;
-  searchUrl.disabled = !enableTextSearch.checked;
   searchUrl.value = items.searchUrl;
   enableLinkOpen.checked = items.enableLinkOpen;
   enableLinkTextSelect.checked = items.enableLinkTextSelect;
 
-  enableTextSearch.addEventListener('change', e => {
+  searchUrl.disabled = !enableTextSearch.checked;
+  enableTextSearch.addEventListener('change', () => {
     searchUrl.disabled = !enableTextSearch.checked;
   }, false);
+
   save.addEventListener('click', () => {
     chrome.storage.sync.set({
       enableTextSearch: enableTextSearch.checked,
