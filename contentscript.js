@@ -8,7 +8,7 @@ chrome.storage.sync.get({
     const isTextArea = element => element.matches(
       'input[type="email"], input[type="number"], input[type="password"], input[type="search"], ' +
       'input[type="tel"], input[type="text"], input[type="url"], textarea'
-    );
+    ) && !element.disabled;
     document.addEventListener('dragover', event => {
       if (event.dataTransfer.types.includes('text/uri-list')) {
         if (items.enableLinkOpen) {
