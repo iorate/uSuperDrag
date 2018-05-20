@@ -1,22 +1,22 @@
 {
   "extensionName": {
-    "message": "Drag To Search"
+    "message": "uSuperDrag"
   },
   "extensionDescription": {
-    "message": "Search for dragged text"
+    "message": "Drag selected text to search for and link to open in a new tab"
   },
 
   "enableTextSearch": {
     "message": "Drag selected text to search for"
   },
   "searchUrl": {
-    "message": "URL"
+    "message": "Search URL"
   },
   "searchUrlDescription": {
     "message": "Substitute search keyword in address with %s or %S"
   },
   "enableLinkOpen": {
-    "message": "Drag link to open"
+    "message": "Drag link to open in a new tab"
   },
   "enableLinkTextSelect": {
     "message": "Drag link text horizontally to select"
