@@ -9,9 +9,9 @@ In addition, this extension enables us to drag link text horizontally and select
 ## Author
 [iorate](https://github.com/iorate) ([Twitter](https://twitter.com/iorate))
 
+## License
+[The MIT License](LICENSE.txt)
+
 [The original code](https://gist.github.com/Griever/5005165) for "Drag link text horizontally to select" feature is copyrighted by [Griever](https://github.com/Griever) and licensed under [the MIT license](https://opensource.org/licenses/mit-license.php).
 
 The icon is made by [Arrow Design](http://yajidesign.net/).
-
-## License
-[The MIT License](LICENSE.txt)
