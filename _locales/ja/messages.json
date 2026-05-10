@@ -18,6 +18,12 @@
   "enableLinkOpen": {
     "message": "リンクをドラッグして新しいタブで開く"
   },
+  "openInBackground": {
+    "message": "新しいタブをバックグラウンドで開く"
+  },
+  "openInBackgroundDescription": {
+    "message": "ドロップ時に Ctrl (Mac では Command) を押すと、この設定が反転します"
+  },
   "enableLinkTextSelect": {
     "message": "リンク文字列を横にドラッグして選択する"
   },

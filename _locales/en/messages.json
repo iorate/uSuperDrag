@@ -18,6 +18,12 @@
   "enableLinkOpen": {
     "message": "Drag link to open in a new tab"
   },
+  "openInBackground": {
+    "message": "Open new tab in background"
+  },
+  "openInBackgroundDescription": {
+    "message": "Hold Ctrl (Command on Mac) while dropping to invert this option"
+  },
   "enableLinkTextSelect": {
     "message": "Drag link text horizontally to select"
   },

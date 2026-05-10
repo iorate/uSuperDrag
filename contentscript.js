@@ -2,8 +2,13 @@ chrome.storage.sync.get({
   enableTextSearch: true,
   searchUrl: 'https://www.google.com/search?q=%s',
   enableLinkOpen: true,
-  enableLinkTextSelect: false
+  enableLinkTextSelect: false,
+  openInBackground: false
 }, items => {
+  const isMac = /^mac/i.test(navigator.userAgentData?.platform ?? navigator.platform);
+  const isAccel = event => isMac ? event.metaKey : event.ctrlKey;
+  const shouldOpenInBackground = event => items.openInBackground !== isAccel(event);
+
   if (items.enableTextSearch || items.enableLinkOpen) {
     const isTextArea = element => element.matches(
       'input[type="email"], input[type="number"], input[type="password"], input[type="search"], ' +
@@ -26,14 +31,14 @@ chrome.storage.sync.get({
       if (event.dataTransfer.types.includes('text/uri-list')) {
         if (items.enableLinkOpen) {
           const url = event.dataTransfer.getData('URL');
-          chrome.runtime.sendMessage(url);
+          chrome.runtime.sendMessage({url, background: shouldOpenInBackground(event)});
           event.preventDefault();
         }
       } else if (event.dataTransfer.types.includes('text/plain')) {
         if (items.enableTextSearch && !isTextArea(event.target)) {
           const keyword = event.dataTransfer.getData('text/plain');
           const url = items.searchUrl.replace(/%s/gi, encodeURIComponent(keyword));
-          chrome.runtime.sendMessage(url);
+          chrome.runtime.sendMessage({url, background: shouldOpenInBackground(event)});
           event.preventDefault();
         }
       }
